@@ -76,8 +76,6 @@ parameters:
     description: BigIP Floating IP
     label: BigIP FIP
     type: string
-    constraints:
-      - custom_constraint: neutron.floating_ip
   vs_vip:
     description: Virtual Server Virtual IP
     label: Virtual Server VIP
