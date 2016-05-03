@@ -21,4 +21,7 @@ resources:
           port_range_min: 4353
           port_range_max: 4353
 
-
+outputs:
+   control_security_group_id:
+     description: Get resource id of this security group
+     value: { get_resource: bigip_control_security_group }
