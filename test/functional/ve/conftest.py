@@ -14,7 +14,7 @@
 #
 #
 
-from f5.bigip import BigIP
+from f5.bigip import ManagementRoot
 
 import pytest
 import time
@@ -27,7 +27,7 @@ def WaitForLicensedBigIP():
             ifc_num, attempts=50, interval=10
     ):
         '''Poll the device until it is licensed and has a config.'''
-        bigip = BigIP(bigip_ip, username, password)
+        bigip = ManagementRoot(bigip_ip, username, password)
         for attempt in range(attempts):
             time.sleep(interval)
             try:
